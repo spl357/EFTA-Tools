@@ -1,9 +1,7 @@
-The original release of the Epstein files by the DOJ had files distributed
-across sub-directories with 1000 files per directory. The biggest
-community assembled archives for the incomplete DataSet 9 flatten these
-directories, resulting in over 500,000 files in a single directory for 
-DataSet 9. This script unflattens the flattened directory containing the
-pdfs for DataSet 9, although it can be used for any of the DataSets.
-It will automatically determine how many directories it needs to create
-based on the total number of files in the target directory and the batch
-size.
+This perl script unflattens the files in a dataset for those that prefer to have all of the files split across sub-directories. To use it, open it in and editor and customize the configuration options at the top. By default it looks for pdf files in $PWD/dataset_00009/pdfs/. It will automatically calculate the number of sub-directories and the batch size, create those directories, then move all of the pdf files into the sub-directories.
+
+# configuration
+my $dataset = "dataset_00009/"; # the dataset to be unflattened
+my $subdir = "pdfs/";           # the name of the sub-directory in the dataset directory containing the files
+my $extension = ".pdf";         # the extension of the file
+my $batch_size = 1000;          # files per sub-directory

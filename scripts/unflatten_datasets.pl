@@ -4,9 +4,9 @@ use File::Copy;
 
 # configuration
 my $dataset = "dataset_00009/";	# the dataset to be unflattened
-my $subdir = "pdfs/";			# the name of the sub-directory in the dataset directory containing the files
-my $extension = ".pdf";			# the extension of the file
-my $batch_size = 1000;			# files per sub-directory
+my $subdir = "pdfs/";						# the name of the sub-directory in the dataset directory containing the files
+my $extension = ".pdf";					# the extension of the file
+my $batch_size = 1000;					# files per sub-directory
 
 # make the numbered sub-sirectories and move files into them.
 make_numbered_dirs($dataset, $subdir, $extension, $batch_size);

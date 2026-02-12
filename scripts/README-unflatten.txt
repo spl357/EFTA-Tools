@@ -1,3 +1,5 @@
+IMPORTANT: This was a quick and dirty one-off script specifically meant to handle files released under the Epstein File Transparency Act and therefore does not do proper input validation. If you are going to re-purpose this script it is recommended that more sophisticated input validation should be added.
+
 This perl script unflattens the files in a dataset for those that prefer to have all of the files split across sub-directories. To use it, open it in and editor and customize the configuration options at the top. By default it looks for pdf files in $PWD/dataset_00009/pdfs/. It will automatically calculate the number of sub-directories and the batch size, create those directories, then move all of the pdf files into the sub-directories.
 
 # configuration
